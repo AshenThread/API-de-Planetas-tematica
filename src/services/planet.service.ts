@@ -22,6 +22,26 @@ const planets: Planet[] = [
     habitable: false,
     description: 'El planeta rojo, hogar de grandes volcanes y antiguos cauces.',
     createdAt: '2026-01-01T00:00:00.000Z'
+  },
+  {
+    id: 'jupiter',
+    name: 'Júpiter',
+    type: 'gas-giant',
+    massEarths: 317.8,
+    distanceFromSunAu: 5.204,
+    habitable: false,
+    description: 'El gigante gaseoso más grande del sistema solar.',
+    createdAt: '2026-01-01T00:00:00.000Z'
+  },
+  {
+    id: 'CenturionB',
+    name: 'Centurion B',
+    type: 'ice-giant',
+    massEarths: 14.5,
+    distanceFromSunAu: 30.1,
+    habitable: false,
+    description: 'Un planeta helado en los confines del sistema solar.',
+    createdAt: '2026-01-01T00:00:00.000Z'
   }
 ];
 
