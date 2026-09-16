@@ -1,0 +1,23 @@
+{
+  "name": "orbital-atlas-api",
+  "version": "1.0.0",
+  "description": "API REST temática de planetas para el deber 2 de Desarrollo Web3",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["typescript", "express", "api", "planets"],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

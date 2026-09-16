@@ -1,0 +1,53 @@
+### Salud de la API
+GET http://localhost:3000/health
+
+### Listar planetas
+GET http://localhost:3000/api/planets
+
+### Obtener un planeta
+GET http://localhost:3000/api/planets/earth
+
+### Crear un planeta (201)
+POST http://localhost:3000/api/planets
+Content-Type: application/json
+
+{
+  "name": "Kepler-186f",
+  "type": "terrestrial",
+  "massEarths": 1.4,
+  "distanceFromSunAu": 500,
+  "habitable": true,
+  "description": "Un mundo rocoso que orbita en una zona potencialmente habitable."
+}
+
+### Validación fallida (400)
+POST http://localhost:3000/api/planets
+Content-Type: application/json
+
+{
+  "name": "X",
+  "type": "unknown",
+  "massEarths": -1,
+  "distanceFromSunAu": -4,
+  "habitable": "yes",
+  "description": "corto"
+}
+
+### Actualizar un planeta (200)
+PUT http://localhost:3000/api/planets/mars
+Content-Type: application/json
+
+{
+  "name": "Marte renovado",
+  "type": "terrestrial",
+  "massEarths": 0.107,
+  "distanceFromSunAu": 1.524,
+  "habitable": false,
+  "description": "El planeta rojo, actualizado para el atlas orbital."
+}
+
+### Eliminar un planeta (204)
+DELETE http://localhost:3000/api/planets/mars
+
+### Recurso inexistente (404)
+GET http://localhost:3000/api/planets/no-existe
