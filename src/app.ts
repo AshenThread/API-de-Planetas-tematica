@@ -10,6 +10,7 @@ const app = express();
 const planetController = new PlanetController(new PlanetService());
 
 app.use(express.json());
+app.use(express.static('public'));
 app.use(requestId);
 app.use(logger);
 

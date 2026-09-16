@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbital Atlas</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">ORBITAL ATLAS / API LOCAL</p>
+          <h1>Explora tu sistema planetario.</h1>
+          <p class="intro">Una vista sencilla para probar el CRUD de planetas en memoria.</p>
+        </div>
+        <div class="status" id="status">Conectando...</div>
+      </header>
+
+      <section class="toolbar">
+        <div>
+          <p class="section-label">CATÁLOGO</p>
+          <h2 id="planet-count">Planetas</h2>
+        </div>
+        <button class="button secondary" id="refresh-button" type="button">Actualizar catálogo</button>
+      </section>
+
+      <section class="content-grid">
+        <div class="planet-grid" id="planet-list" aria-live="polite"></div>
+
+        <aside class="form-panel">
+          <p class="section-label">NUEVO REGISTRO</p>
+          <h2>Añadir planeta</h2>
+          <form id="planet-form">
+            <label>Nombre <input name="name" required minlength="2" placeholder="Ej. Venus" /></label>
+            <label>Tipo
+              <select name="type" required>
+                <option value="terrestrial">Terrestre</option>
+                <option value="gas-giant">Gigante gaseoso</option>
+                <option value="ice-giant">Gigante helado</option>
+                <option value="dwarf">Enano</option>
+              </select>
+            </label>
+            <div class="two-columns">
+              <label>Masa (Tierras) <input name="massEarths" type="number" min="0.01" step="0.001" required placeholder="1" /></label>
+              <label>Distancia (UA) <input name="distanceFromSunAu" type="number" min="0" step="0.001" required placeholder="1" /></label>
+            </div>
+            <label>Descripción <textarea name="description" required minlength="10" placeholder="Describe este mundo..."></textarea></label>
+            <label class="checkbox"><input name="habitable" type="checkbox" /> Potencialmente habitable</label>
+            <button class="button primary" type="submit">Crear planeta</button>
+          </form>
+          <p class="feedback" id="feedback" role="status"></p>
+        </aside>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
