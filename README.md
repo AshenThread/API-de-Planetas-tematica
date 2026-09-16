@@ -21,6 +21,8 @@ npm run build
 npm start
 ```
 
+También puedes abrir `http://localhost:3000/` en el navegador para visualizar el catálogo. La interfaz permite listar planetas, crear uno nuevo y eliminar registros usando la API en memoria.
+
 ## Estructura
 
 ```text
